@@ -1,0 +1,3 @@
+$('table tbody').append("<%= escape_javascript(render @ofertado) %>")
+$("input#totalregs").attr('value','<%= @ofertados.count %>');//codigo del conteo de la paginacion
+$.lazybox.close()

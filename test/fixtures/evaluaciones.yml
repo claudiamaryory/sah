@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empleado: 
+  servicio: 
+  tipo_calificacion: 
+  observacion: MyText
+
+two:
+  empleado: 
+  servicio: 
+  tipo_calificacion: 
+  observacion: MyText

@@ -1,0 +1,14 @@
+
+<%- model_class = Servicio -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='servicio'>
+  <p><%= @servicio.hora %></p>
+  <p><%= @servicio.fecha %></p>
+  <p><%= @servicio.empleado_id %></p>
+  <p><%= @servicio.solicitud_servicio_id %></p>
+  <p><%= @servicio.cliente_id %></p>
+</div>
+

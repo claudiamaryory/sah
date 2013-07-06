@@ -1,0 +1,16 @@
+
+<%- model_class = Empleado -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='empleado'>
+
+  <p><%= @empleado.nombre %></p>
+  <p><%= @empleado.apellido %></p>
+  <p><%= @empleado.documento %></p>
+  <p><%= @empleado.telefono %></p>
+  <p><%= @empleado.celular %></p>
+</div>
+
+

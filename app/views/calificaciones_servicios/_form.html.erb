@@ -1,0 +1,20 @@
+ <%= stylesheet_link_tag "application", :media => "all" %>
+ <%= simple_form_for(@calificacion_servicio, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+  
+<div  id="camp">
+  <%= f.label :cliente %>
+   <%= f.collection_select :cliente_id, Cliente.all, :id,:nombre, :order => 'nombre', :required => true %><br><br>
+
+  <%= f.label :tipo_calificacion %>
+  <%= f.collection_select :tipo_calificacion_id, TipoCalificacion.all, :id,:nombre, :order => 'nombre', :required => true %><br><br>
+  
+  <%= f.label :observaciones %>
+  <%= f.text_area(:observaciones, :rows => 5 )%>
+  </div>
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', calificaciones_servicios_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>

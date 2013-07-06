@@ -1,0 +1,12 @@
+<tr id=<%= "ofertado_#{ofertado.id}" %>>
+  
+  <td><%= ofertado.nombre %></td>
+  <td>
+    <%= link_to 'Mostrar', ofertado, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_ofertado_path(ofertado), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', ofertado, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

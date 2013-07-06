@@ -1,0 +1,18 @@
+<%= simple_form_for(@reprogramacion, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+  
+  <%= f.input :hora , :label => "Hora",  :required => true%>
+  <%= f.input :fecha, :label => "Fecha",  :required => true %>
+
+   <%= f.label :solicitud_servicio %>
+   <%= f.collection_select :solicitud_servicio_id, SolicitudServicio.all, :id,:nombre, :order => 'nombre', :required => true %><br><b>
+
+<%= f.label :observacion %><br>
+  <%= f.text_area(:observacion, :rows => 5 )%>
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', reprogramaciones_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>
+

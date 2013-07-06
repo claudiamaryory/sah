@@ -1,0 +1,17 @@
+<tr id=<%= "servicio_#{servicio.id}" %>>
+  
+  
+  <td><%= servicio.fecha %></td>
+  <td><%= servicio.hora %></td>
+  <td><%= servicio.empleado.nombre%></td>
+  <td><%= servicio.solicitud_servicio.ofertado %></td>
+  <td><%= servicio.cliente.nombre%></td>
+  <td>
+    <%= link_to 'Mostrar', servicio, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_servicio_path(servicio), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', servicio, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

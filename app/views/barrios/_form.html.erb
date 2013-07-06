@@ -1,0 +1,14 @@
+
+<%= simple_form_for([@municipio,@barrio], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+  
+
+  <%= f.input :nombre, :label => "Nombre",  :required => true %>
+ 
+  
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', municipio_barrios_path(@municipio), :class => 'btn btn-small' %>
+  </div>
+<% end %>

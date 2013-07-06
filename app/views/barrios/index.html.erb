@@ -1,0 +1,51 @@
+<br><br><br><br>
+<%- model_class = Barrio -%>
+<div class="page-header">
+  <center><h1>Barrios</h1></center>
+
+ <!--codigo del buscador-->
+<%= form_tag request.path, :method => 'get' do %>
+Nombre Barrio a Buscar:
+<div class="imput-append">
+  <%= search_field_tag :search, params[:search],options={:class=>"span2", :placeholder => "Barrio"}  %>
+    <%= submit_tag "Consultar", options={ :class => "btn btn-info", :nombre => nil} %>
+</div>
+<p>numero de registros:
+  <p><%= text_field_tag :registro, params[:registro], options={:class=>"span1"} %></p>
+
+<% end %>
+
+<br />
+
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+     
+      <th>nombre</th>
+     
+       <th></th>
+        <th></th>
+      
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @barrios %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><%= link_to 'Nuevo Barrio', new_municipio_barrio_path(@municipio), :remote => true %></td>
+    </tr>
+  </tfoot>
+</table>
+ <%= link_to 'Atras', municipios_path, :class => 'btn btn-mini' %>
+
+<br/>
+<br/><!--codigo de la paginacion-->
+<div align="center"> 
+<%= will_paginate @barrios, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+</div>
+<td> 
+Total Barrios :<input type="text"  id="totalregs" class="span1" value="<%= @barrios.total_entries %>" readonly />
+</td>

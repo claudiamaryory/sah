@@ -1,0 +1,15 @@
+<tr id=<%= "calificacion_servicio_#{calificacion_servicio.id}" %>>
+ 
+  <td><%= calificacion_servicio.cliente.nombre %></td>
+  <td><%= calificacion_servicio.tipo_calificacion.nombre %></td>
+  <td><%= calificacion_servicio.observaciones %></td>
+  <td>
+    <%= link_to 'Mostrar', calificacion_servicio, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_calificacion_servicio_path(calificacion_servicio), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', calificacion_servicio, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>
+

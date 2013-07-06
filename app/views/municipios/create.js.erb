@@ -1,0 +1,4 @@
+$('table tbody').append("<%= escape_javascript(render @municipio) %>")
+$("input#totalregs").attr('value','<%= @municipios.count %>');//codigo del conteo de la paginacion
+
+$.lazybox.close()

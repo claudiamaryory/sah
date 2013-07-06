@@ -1,0 +1,6 @@
+$('tr#cliente_<%= @cliente.id %>').replaceWith("<%= escape_javascript(render @cliente) %>")
+$.lazybox.close()
+
+$('#cliente_barrio_nombre').bind('railsAutocomplete.select', function(event, data){
+$("#barrio_id").attr("value",data.item.id);
+});

@@ -1,0 +1,25 @@
+
+<%= simple_form_for(@solicitud_servicio, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+
+
+  <%= f.error_notification %>
+  
+
+  <%= f.input :nombre, :label => "Nombre",  :required => true %>
+  <%= f.input :apellido, :label => "Apellido",  :required => true %>
+  <%= f.input :documento, :label => "Documento",  :required => true %>
+  <%= f.input :direccion, :label => "Direccion",  :required => true %>
+  <%= f.input :barrio_id, :label => "Barrio",  :required => true %>
+  <%= f.input :telefono, :label => "Telefono",  :required => true %>
+  <%= f.input :celular, :label => "Celular",  :required => true %>
+  <%= f.input :email, :label => "Email",  :required => true %>
+  <%= f.label :interesado %>
+  <%= f.collection_select :ofertado_id, Ofertado.all, :id,:nombre, :order => 'nombre', :required => true %><br><br>
+  
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', solicitudes_servicios_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>
+

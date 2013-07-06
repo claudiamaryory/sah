@@ -1,0 +1,15 @@
+<tr id=<%= "reprogramacion_#{reprogramacion.id}" %>>
+  
+  <td><%= reprogramacion.hora %></td>
+  <td><%= reprogramacion.fecha %></td>
+  <td><%= reprogramacion.solicitud_servicio.nombre %></td>
+  <td><%= reprogramacion.observacion %></td>
+  <td>
+    <%= link_to 'Mostrar', reprogramacion, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_reprogramacion_path(reprogramacion), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', reprogramacion, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

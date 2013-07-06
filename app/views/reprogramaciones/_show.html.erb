@@ -1,0 +1,13 @@
+<br><br><br><br>
+<%- model_class = Reprogramacion -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='reprogramacion'>
+  <p><%= @reprogramacion.hora %></p>
+  <p><%= @reprogramacion.fecha %></p>
+  <p><%= @reprogramacion.solicitud_servicio_id %></p>
+  <p><%= @reprogramacion.observacion %></p>
+</div>
+

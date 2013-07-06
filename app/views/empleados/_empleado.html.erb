@@ -1,0 +1,16 @@
+<tr id=<%= "empleado_#{empleado.id}" %>>
+    <td><%= empleado.nombre %></td>
+    <td><%= empleado.apellido %></td>
+    <td><%= empleado.documento %></td>
+    <td><%= empleado.telefono %></td>
+    <td><%= empleado.celular %></td>
+
+  <td>
+    <%= link_to 'Mostrar', empleado, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_empleado_path(empleado), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', empleado, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

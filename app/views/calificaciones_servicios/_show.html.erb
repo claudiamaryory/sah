@@ -1,0 +1,10 @@
+<%- model_class = CalificacionServicio -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='calificacion_servicio'>
+  <p><%= @calificacion_servicio.cliente_id %></p>
+  <p><%= @calificacion_servicio.tipo_calificacion_id %></p>
+  <p><%= @calificacion_servicio.observaciones %></p>
+</div>

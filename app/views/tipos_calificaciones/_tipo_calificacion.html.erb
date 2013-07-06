@@ -1,0 +1,12 @@
+<tr id=<%= "tipo_calificacion_#{tipo_calificacion.id}" %>>
+  
+  <td><%= tipo_calificacion.nombre %></td>
+  <td>
+    <%= link_to 'Mostrar', tipo_calificacion, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_tipo_calificacion_path(tipo_calificacion), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', tipo_calificacion, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

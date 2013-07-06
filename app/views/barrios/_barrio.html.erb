@@ -1,0 +1,13 @@
+<tr id=<%= "barrio_#{barrio.id}" %>>
+ 
+  <td><%= barrio.nombre %></td>
+
+  <td>
+    <%= link_to 'Mostrar', municipio_barrio_path(@municipio,barrio), :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_municipio_barrio_path(@municipio,barrio), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', municipio_barrio_path(@municipio,barrio), 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+   
+</tr>

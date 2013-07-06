@@ -1,0 +1,16 @@
+<%- model_class = Cliente -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<div class='cliente'>
+  <p><%= @cliente.id %></p>
+  <p><%= @cliente.nombre %></p>
+  <p><%= @cliente.apellido %></p>
+  <p><%= @cliente.documento %></p>
+  <p><%= @cliente.direccion %></p>
+  <p><%= @cliente.barrio %></p>
+  <p><%= @cliente.telefono %></p>
+  <p><%= @cliente.celular %></p>
+  <p><%= @cliente.email %></p>
+</div>
