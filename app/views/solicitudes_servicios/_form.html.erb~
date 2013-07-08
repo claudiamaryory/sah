@@ -10,7 +10,11 @@
   <%= f.input :apellido, :label => "Apellido",  :required => true %>
   <%= f.input :documento, :label => "Documento",  :required => true %>
   <%= f.input :direccion, :label => "Direccion",  :required => true %>
-  <%= f.input :barrio_id, :label => "Barrio",  :required => true %>
+  <div  id="camp">
+  <%= f.label :barrio %><br>
+  <%= f.collection_select :barrio_id, Barrio.all, :id, :nombre, :order => 'nombre' %>
+   </div>
+<br>
   <%= f.input :telefono, :label => "Telefono",  :required => true %>
   <%= f.input :celular, :label => "Celular",  :required => true %>
   <%= f.input :email, :label => "Email",  :required => true %>

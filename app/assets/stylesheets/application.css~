@@ -22,7 +22,7 @@
 
 #lazybox_close.img {
   background: url('close.png') no-repeat;
-  width: 25px;
+  width: 50px;
   height: 25px;
   top: -17px;
   right: -17px;

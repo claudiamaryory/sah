@@ -2,7 +2,7 @@
 <br><br><br><br><br>
 <%- model_class = CalificacionServicio -%>
 <div class="page-header">
-  <center><h1>Calificación del Servicio </h1></center>
+  <center><h1>Calificacion del Servicio </h1></center>
 
   <!--codigo del buscador-->
 <%= form_tag request.path, :method => 'get' do %>

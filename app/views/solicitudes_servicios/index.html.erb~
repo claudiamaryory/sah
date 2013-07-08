@@ -10,7 +10,7 @@
       <th>apellido</th>
       <th>documento</th>
       <th>direccion</th>
-      <th>barrio_id</th>
+      <th>barrio</th>
       <th>telefono</th>
       <th>celular</th>
       <th>email</th>

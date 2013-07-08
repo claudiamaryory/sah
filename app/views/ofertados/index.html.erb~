@@ -1,7 +1,7 @@
 <br><br>
 <%- model_class = Ofertado -%>
 <div class="page-header">
- <center><h1>Servicios Ofertados</h1></center>
+  <h1>Servicios Ofertados</h1>
 
  <!--codigo del buscador-->
 <%= form_tag request.path, :method => 'get' do %>

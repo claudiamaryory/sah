@@ -1,5 +1,5 @@
 body {
-  background-color:#AFEEEE; /*de aca cambio el color de fondo de la pagina*/
+  background-color:#F0F8FF; /*de aca cambio el color de fondo de la pagina*/
   color: #333;/*de aca cambio el color de la letra*/
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -8,7 +8,7 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;/*de aca cambio el tipo de letra*/
-  font-size: 11px;/*de aca cambio el tamaño del menu*/
+  font-size: 10px;/*de aca cambio el tamaño del menu*/
   line-height: 18px;
 }
 
