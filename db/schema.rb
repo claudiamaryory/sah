@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130620174457) do
+ActiveRecord::Schema.define(:version => 20130709164926) do
 
   create_table "barrios", :force => true do |t|
     t.string   "nombre"
@@ -54,8 +54,12 @@ ActiveRecord::Schema.define(:version => 20130620174457) do
     t.string   "documento"
     t.string   "telefono"
     t.string   "celular"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
   end
 
   create_table "evaluaciones", :force => true do |t|

@@ -16,10 +16,19 @@ class Cliente < ActiveRecord::Base
      :format => { :with => /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
 
      validates :documento, :presence => true,
-	:length => { :minimum => 6, :maximum => 15 },
-	:numericality => true
+  	:length => { :minimum => 6, :maximum => 15 },
+  	:numericality => true
+    
+    validates :telefono, :presence => true,
+    :length => { :minimum => 6, :maximum => 15 },
+    :numericality => true
 
-
+     validates :celular, :presence => true,
+    :length => { :minimum => 6, :maximum => 15 },
+    :numericality => true
+    
+    
+ 
    
    def self.search(search)
     where('nombre like ?', "%#{search}%")

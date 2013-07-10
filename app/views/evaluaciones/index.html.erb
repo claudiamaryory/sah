@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
 <br><br><br><br>
 <%- model_class = Evaluacion -%>
 <div class="page-header">
@@ -17,8 +18,11 @@
      <%= render @evaluaciones %>
   </tbody>
   <tfoot>
-    <tr>
-      <td><%= link_to 'Nueva Evaluacion', new_evaluacion_path, :remote => true %></td>
+
     </tr>
   </tfoot>
 </table>
+<tr><br>
+  <center>
+      <td><%= link_to 'Nueva Evaluacion', new_evaluacion_path, :remote => true, :class=>"btn", :id => 'am' %></td>
+  </center>

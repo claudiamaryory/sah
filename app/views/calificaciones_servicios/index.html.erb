@@ -35,9 +35,7 @@ Nombre a Buscar:
 
   </tbody>
   <tfoot>
-    <tr>
-      <td><%= link_to 'Nueva Calificacion del Servicio', new_calificacion_servicio_path, :remote => true %></td>
-    </tr>
+    
   </tfoot>
 </table>
 <br/><!--codigo de la paginacion-->
@@ -48,3 +46,6 @@ Nombre a Buscar:
 <td> 
 Total Calificaciones_servicios :<input type="text"  id="totalregs" class="span1" value="<%= @calificaciones_servicios.total_entries %>" readonly />
 </td>
+<tr>
+      <td><%= link_to 'Nueva Calificacion del Servicio', new_calificacion_servicio_path, :remote => true , :class=>"btn", :id => 'am'%></td>
+    </tr>

@@ -14,10 +14,11 @@
   <tbody>
      <%= render @tipos_calificaciones %>
   </tbody>
-  <tfoot>
-    <tr>
-      <td><%= link_to 'Nuevo tipo_calificacion', new_tipo_calificacion_path, :remote => true %></td>
-    </tr>
-  </tfoot>
+ 
 </table>
 
+ <tfoot>
+    <tr>
+      <td><%= link_to 'Nuevo tipo_calificacion', new_tipo_calificacion_path, :remote => true, :class=>"btn", :id => 'am' %></td>
+    </tr>
+  </tfoot>

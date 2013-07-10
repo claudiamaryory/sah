@@ -17,9 +17,9 @@
   <tbody>
      <%= render @servicios %>
   </tbody>
-  <tfoot>
-    <tr>
-      <td><%= link_to 'Nuevo Servicio', new_servicio_path, :remote => true %></td>
-    </tr>
-  </tfoot>
+  
 </table>
+
+    <tr>
+      <td><%= link_to 'Nuevo Servicio', new_servicio_path, :remote => true, :class=>"btn", :id => 'am' %></td>
+    </tr>

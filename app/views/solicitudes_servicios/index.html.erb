@@ -22,9 +22,10 @@
   <tbody>
      <%= render @solicitudes_servicios %>
   </tbody>
-  <tfoot>
+  
+</table>
+<tfoot>
     <tr>
-      <td><%= link_to 'Nueva Solicitud_Servicio', new_solicitud_servicio_path, :remote => true %></td>
+      <td><%= link_to 'Nueva Solicitud_Servicio', new_solicitud_servicio_path, :remote => true, :class=>"btn", :id => 'am' %></td>
     </tr>
   </tfoot>
-</table>

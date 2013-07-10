@@ -16,10 +16,8 @@
   <tbody>
      <%= render @reprogramaciones %>
   </tbody>
-  <tfoot>
-    <tr>
-      <td><%= link_to 'Nueva Reprogramacion', new_reprogramacion_path, :remote => true %></td>
-    </tr>
-  </tfoot>
 </table>
 
+<tr>
+      <td><%= link_to 'Nueva Reprogramacion', new_reprogramacion_path, :remote => true, :class=>"btn", :id => 'am' %></td>
+    </tr>

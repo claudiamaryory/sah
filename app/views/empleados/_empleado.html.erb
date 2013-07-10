@@ -1,4 +1,5 @@
 <tr id=<%= "empleado_#{empleado.id}" %>>
+    <td><%= image_tag empleado.imagen.url(:lsmall)%></td><!--codigo de la imagen-->
     <td><%= empleado.nombre %></td>
     <td><%= empleado.apellido %></td>
     <td><%= empleado.documento %></td>

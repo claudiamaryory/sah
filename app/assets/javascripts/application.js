@@ -16,6 +16,7 @@
 //= require jquery-ui
 //= require autocomplete-rails
 //= require lazybox
+//= require jquery.remotipart
 //= require_tree .
 
 $(document).ready(function() {
@@ -31,3 +32,5 @@ $('#cliente_barrio_nombre').bind('railsAutocomplete.select', function(event, dat
 $("#barrio_id").attr("value",data.item.id);
 });
 });
+
+

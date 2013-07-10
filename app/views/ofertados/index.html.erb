@@ -29,9 +29,7 @@ Nombre Servicios Ofertados a Buscar:
      <%= render @ofertados %>
   </tbody>
   <tfoot>
-    <tr>
-      <td><%= link_to 'Nuevo Servicio ofertado', new_ofertado_path, :remote => true %></td>
-    </tr>
+    
   </tfoot>
 </table>
 
@@ -44,3 +42,6 @@ Nombre Servicios Ofertados a Buscar:
 <td> 
 Total Barrios :<input type="text"  id="totalregs" class="span1" value="<%= @ofertados.total_entries %>" readonly />
 </td>
+<tr>
+      <td><%= link_to 'Nuevo Servicio ofertado', new_ofertado_path, :remote => true, :class=>"btn", :id => 'am' %></td>
+    </tr>

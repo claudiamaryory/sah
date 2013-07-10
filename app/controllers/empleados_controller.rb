@@ -29,7 +29,7 @@ class EmpleadosController < ApplicationController
   def create
       @empleado = Empleado.new(params[:empleado])
       render :action => :new unless @empleado.save
-      @empleados = Empleado.all
+      @empleados = Empleado.all #codigo del contador de la paginación
   end
 
   def update
@@ -39,7 +39,7 @@ class EmpleadosController < ApplicationController
   def destroy
       @empleado = Empleado.find(params[:id])
       @empleado.destroy
-      @empleados = Empleado.all
+      @empleados = Empleado.all#codigo del contador de la paginación
   end
   
 end

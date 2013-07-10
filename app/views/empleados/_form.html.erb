@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@empleado, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+<%= simple_form_for(@empleado, :html => { :class => 'form-horizontal', :multipart => true }, :remote => true) do |f| %>
 
   <%= f.error_notification %>
  
@@ -9,6 +9,11 @@
   <%= f.input :documento, :label => "Documento",  :required => true  %>
   <%= f.input :telefono, :label => "Telefono",  :required => true  %>
   <%= f.input :celular , :label => "Celular",  :required => true %>
+
+  <div class="field"><!-- campo para  meter la imagen-->
+  <%= f.label :imagen %>
+  <%= f.file_field :imagen %>
+</div>
   
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-primary' %>

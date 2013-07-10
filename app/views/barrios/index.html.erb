@@ -23,20 +23,12 @@ Nombre Barrio a Buscar:
     <tr>
      
       <th>nombre</th>
-     
        <th></th>
-        <th></th>
-      
     </tr>
   </thead>
   <tbody>
      <%= render @barrios %>
   </tbody>
-  <tfoot>
-    <tr>
-      <td><%= link_to 'Nuevo Barrio', new_municipio_barrio_path(@municipio), :remote => true %></td>
-    </tr>
-  </tfoot>
 </table>
  <%= link_to 'Atras', municipios_path, :class => 'btn btn-mini' %>
 
@@ -49,3 +41,6 @@ Nombre Barrio a Buscar:
 <td> 
 Total Barrios :<input type="text"  id="totalregs" class="span1" value="<%= @barrios.total_entries %>" readonly />
 </td>
+<tr>
+      <td><%= link_to 'Nuevo Barrio', new_municipio_barrio_path(@municipio), :remote => true, :class=>"btn", :id => 'am' %></td>
+    </tr>
