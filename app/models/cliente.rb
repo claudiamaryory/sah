@@ -2,6 +2,7 @@ class Cliente < ActiveRecord::Base
   belongs_to :barrio
   has_many :calificaciones_servicios
   has_many :servicios
+  has_many :solicitudes_servicios
   attr_accessible :apellido, :celular, :direccion, :documento, :email, :nombre, :telefono, :barrio_id
   
      validates :nombre, :presence => true,

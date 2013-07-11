@@ -1,0 +1,94 @@
+                          ofertados GET    /ofertados(.:format)                                           ofertados#index
+                                    POST   /ofertados(.:format)                                           ofertados#create
+                       new_ofertado GET    /ofertados/new(.:format)                                       ofertados#new
+                      edit_ofertado GET    /ofertados/:id/edit(.:format)                                  ofertados#edit
+                           ofertado GET    /ofertados/:id(.:format)                                       ofertados#show
+                                    PUT    /ofertados/:id(.:format)                                       ofertados#update
+                                    DELETE /ofertados/:id(.:format)                                       ofertados#destroy
+                        pagina_home GET    /pagina/home(.:format)                                         pagina#home
+                   reprogramaciones GET    /reprogramaciones(.:format)                                    reprogramaciones#index
+                                    POST   /reprogramaciones(.:format)                                    reprogramaciones#create
+                 new_reprogramacion GET    /reprogramaciones/new(.:format)                                reprogramaciones#new
+                edit_reprogramacion GET    /reprogramaciones/:id/edit(.:format)                           reprogramaciones#edit
+                     reprogramacion GET    /reprogramaciones/:id(.:format)                                reprogramaciones#show
+                                    PUT    /reprogramaciones/:id(.:format)                                reprogramaciones#update
+                                    DELETE /reprogramaciones/:id(.:format)                                reprogramaciones#destroy
+                       evaluaciones GET    /evaluaciones(.:format)                                        evaluaciones#index
+                                    POST   /evaluaciones(.:format)                                        evaluaciones#create
+                     new_evaluacion GET    /evaluaciones/new(.:format)                                    evaluaciones#new
+                    edit_evaluacion GET    /evaluaciones/:id/edit(.:format)                               evaluaciones#edit
+                         evaluacion GET    /evaluaciones/:id(.:format)                                    evaluaciones#show
+                                    PUT    /evaluaciones/:id(.:format)                                    evaluaciones#update
+                                    DELETE /evaluaciones/:id(.:format)                                    evaluaciones#destroy
+                          servicios GET    /servicios(.:format)                                           servicios#index
+                                    POST   /servicios(.:format)                                           servicios#create
+                       new_servicio GET    /servicios/new(.:format)                                       servicios#new
+                      edit_servicio GET    /servicios/:id/edit(.:format)                                  servicios#edit
+                           servicio GET    /servicios/:id(.:format)                                       servicios#show
+                                    PUT    /servicios/:id(.:format)                                       servicios#update
+                                    DELETE /servicios/:id(.:format)                                       servicios#destroy
+              solicitudes_servicios GET    /solicitudes_servicios(.:format)                               solicitudes_servicios#index
+                                    POST   /solicitudes_servicios(.:format)                               solicitudes_servicios#create
+             new_solicitud_servicio GET    /solicitudes_servicios/new(.:format)                           solicitudes_servicios#new
+            edit_solicitud_servicio GET    /solicitudes_servicios/:id/edit(.:format)                      solicitudes_servicios#edit
+                 solicitud_servicio GET    /solicitudes_servicios/:id(.:format)                           solicitudes_servicios#show
+                                    PUT    /solicitudes_servicios/:id(.:format)                           solicitudes_servicios#update
+                                    DELETE /solicitudes_servicios/:id(.:format)                           solicitudes_servicios#destroy
+           calificaciones_servicios GET    /calificaciones_servicios(.:format)                            calificaciones_servicios#index
+                                    POST   /calificaciones_servicios(.:format)                            calificaciones_servicios#create
+          new_calificacion_servicio GET    /calificaciones_servicios/new(.:format)                        calificaciones_servicios#new
+         edit_calificacion_servicio GET    /calificaciones_servicios/:id/edit(.:format)                   calificaciones_servicios#edit
+              calificacion_servicio GET    /calificaciones_servicios/:id(.:format)                        calificaciones_servicios#show
+                                    PUT    /calificaciones_servicios/:id(.:format)                        calificaciones_servicios#update
+                                    DELETE /calificaciones_servicios/:id(.:format)                        calificaciones_servicios#destroy
+autocomplete_barrio_nombre_clientes GET    /clientes/autocomplete_barrio_nombre(.:format)                 clientes#autocomplete_barrio_nombre
+      cliente_solicitudes_servicios GET    /clientes/:cliente_id/solicitudes_servicios(.:format)          solicitudes_servicios#index
+                                    POST   /clientes/:cliente_id/solicitudes_servicios(.:format)          solicitudes_servicios#create
+     new_cliente_solicitud_servicio GET    /clientes/:cliente_id/solicitudes_servicios/new(.:format)      solicitudes_servicios#new
+    edit_cliente_solicitud_servicio GET    /clientes/:cliente_id/solicitudes_servicios/:id/edit(.:format) solicitudes_servicios#edit
+         cliente_solicitud_servicio GET    /clientes/:cliente_id/solicitudes_servicios/:id(.:format)      solicitudes_servicios#show
+                                    PUT    /clientes/:cliente_id/solicitudes_servicios/:id(.:format)      solicitudes_servicios#update
+                                    DELETE /clientes/:cliente_id/solicitudes_servicios/:id(.:format)      solicitudes_servicios#destroy
+                           clientes GET    /clientes(.:format)                                            clientes#index
+                                    POST   /clientes(.:format)                                            clientes#create
+                        new_cliente GET    /clientes/new(.:format)                                        clientes#new
+                       edit_cliente GET    /clientes/:id/edit(.:format)                                   clientes#edit
+                            cliente GET    /clientes/:id(.:format)                                        clientes#show
+                                    PUT    /clientes/:id(.:format)                                        clientes#update
+                                    DELETE /clientes/:id(.:format)                                        clientes#destroy
+                            barrios GET    /barrios(.:format)                                             barrios#index
+                                    POST   /barrios(.:format)                                             barrios#create
+                         new_barrio GET    /barrios/new(.:format)                                         barrios#new
+                        edit_barrio GET    /barrios/:id/edit(.:format)                                    barrios#edit
+                             barrio GET    /barrios/:id(.:format)                                         barrios#show
+                                    PUT    /barrios/:id(.:format)                                         barrios#update
+                                    DELETE /barrios/:id(.:format)                                         barrios#destroy
+               tipos_calificaciones GET    /tipos_calificaciones(.:format)                                tipos_calificaciones#index
+                                    POST   /tipos_calificaciones(.:format)                                tipos_calificaciones#create
+              new_tipo_calificacion GET    /tipos_calificaciones/new(.:format)                            tipos_calificaciones#new
+             edit_tipo_calificacion GET    /tipos_calificaciones/:id/edit(.:format)                       tipos_calificaciones#edit
+                  tipo_calificacion GET    /tipos_calificaciones/:id(.:format)                            tipos_calificaciones#show
+                                    PUT    /tipos_calificaciones/:id(.:format)                            tipos_calificaciones#update
+                                    DELETE /tipos_calificaciones/:id(.:format)                            tipos_calificaciones#destroy
+                  municipio_barrios GET    /municipios/:municipio_id/barrios(.:format)                    barrios#index
+                                    POST   /municipios/:municipio_id/barrios(.:format)                    barrios#create
+               new_municipio_barrio GET    /municipios/:municipio_id/barrios/new(.:format)                barrios#new
+              edit_municipio_barrio GET    /municipios/:municipio_id/barrios/:id/edit(.:format)           barrios#edit
+                   municipio_barrio GET    /municipios/:municipio_id/barrios/:id(.:format)                barrios#show
+                                    PUT    /municipios/:municipio_id/barrios/:id(.:format)                barrios#update
+                                    DELETE /municipios/:municipio_id/barrios/:id(.:format)                barrios#destroy
+                         municipios GET    /municipios(.:format)                                          municipios#index
+                                    POST   /municipios(.:format)                                          municipios#create
+                      new_municipio GET    /municipios/new(.:format)                                      municipios#new
+                     edit_municipio GET    /municipios/:id/edit(.:format)                                 municipios#edit
+                          municipio GET    /municipios/:id(.:format)                                      municipios#show
+                                    PUT    /municipios/:id(.:format)                                      municipios#update
+                                    DELETE /municipios/:id(.:format)                                      municipios#destroy
+                          empleados GET    /empleados(.:format)                                           empleados#index
+                                    POST   /empleados(.:format)                                           empleados#create
+                       new_empleado GET    /empleados/new(.:format)                                       empleados#new
+                      edit_empleado GET    /empleados/:id/edit(.:format)                                  empleados#edit
+                           empleado GET    /empleados/:id(.:format)                                       empleados#show
+                                    PUT    /empleados/:id(.:format)                                       empleados#update
+                                    DELETE /empleados/:id(.:format)                                       empleados#destroy
+                               root        /                                                              pagina#home

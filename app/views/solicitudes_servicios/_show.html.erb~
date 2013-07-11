@@ -5,10 +5,14 @@
 </div>
 
 <div class='solicitudservicio'>
+  <p><%= @solicitud_servicio.nombre %></p>
+  <p><%= @solicitud_servicio.apellido %></p>
   <p><%= @solicitud_servicio.direccion %></p>
+  <p><%= @solicitud_servicio.documento %></p>
   <p><%= @solicitud_servicio.barrio_id %></p>
   <p><%= @solicitud_servicio.telefono %></p>
+  <p><%= @solicitud_servicio.celular %></p>
+  <p><%= @solicitud_servicio.email %></p>
   <p><%= @solicitud_servicio.interesado %></p>
-  <p><%= @solicitud_servicio.observaciones %></p>
 </div>
 

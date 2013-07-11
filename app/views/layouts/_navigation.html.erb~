@@ -18,7 +18,9 @@
 	<li>
 	<%= link_to(' tipos_calificaciones', tipos_calificaciones_path) %>
 	</li>
-	
+	<li>
+	<%= link_to('solicitudes_servicios', solicitudes_servicios_path) %>
+	</li>
 	<li>
 	<%= link_to('Orden Servicio', servicios_path) %>
 	</li>

@@ -1,5 +1,5 @@
 <tr id=<%= "cliente_#{cliente.id}" %>>
-  <td><%= link_to 'Solicitudes', cliente_solicitudes_servicios_path(cliente) %></td>
+  <td><%= link_to 'Solicitudes', cliente_solicitudesServicios_path(cliente) %></td>
   <td><%= cliente.nombre %></td>
   <td><%= cliente.apellido %></td>
   <td><%= cliente.documento %></td>

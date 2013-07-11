@@ -21,7 +21,6 @@ Sah::Application.routes.draw do
 
   resources :clientes do 
     get :autocomplete_barrio_nombre, :on => :collection
-    resources :solicitudes_servicios
   end  
 
 
