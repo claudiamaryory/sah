@@ -1,7 +1,9 @@
 class ServiciosController < ApplicationController
  
+before_filter :find_solicitudservicio_and_servicio # filtro para detalle amestro
+
   def index
-    @servicios = Servicio.all
+    @servicios = @solicitud_servicio.servicios.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,6 +31,7 @@ class ServiciosController < ApplicationController
   
   def create
     @servicio = Servicio.new(params[:servicio])
+    @servicio.solicitud_servicio_id = @solicitud_servicio.id
     render :action => :new unless @servicio.save
   
   end
@@ -44,7 +47,11 @@ class ServiciosController < ApplicationController
   def destroy
     @servicio = Servicio.find(params[:id])
     @servicio.destroy
-
-  
   end
+
+  def find_solicitudservicio_and_servicio  # filtro de detalle maestro
+      @solicitud_servicio = SolicitudServicio.find(params[:solicitud_servicio_id])
+      @servicio = Servicio.find(params[:id]) if params[:id]
+  end
+
 end

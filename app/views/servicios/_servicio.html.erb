@@ -7,11 +7,16 @@
   <td><%= servicio.solicitud_servicio.ofertado.nombre %></td>
   <td><%= servicio.cliente.nombre%></td>
   <td>
-    <%= link_to 'Mostrar', servicio, :remote => true, :class => 'btn btn-mini' %>
-    <%= link_to 'Editar', edit_servicio_path(servicio), :remote => true,
-        :class => 'btn btn-mini' %>
-    <%= link_to 'Eliminar', servicio, 
+    <%= link_to 'Mostrar', solicitud_servicio_servicios_path(@solicitud_servicio,servicio), :remote => true, :class => 'btn btn-mini' %>
+
+
+    <%= link_to 'Editar', edit_solicitud_servicio_servicio_path(@solicitud_servicio,servicio), :remote => true,
+      :class => 'btn btn-mini' %>
+
+    <%= link_to 'Eliminar', solicitud_servicio_servicio_path(@solicitud_servicio,servicio),
         :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+ 
+
   </td>
 </tr>

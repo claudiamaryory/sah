@@ -10,10 +10,9 @@ Sah::Application.routes.draw do
   resources :evaluaciones
 
 
-  resources :servicios
-
-
-  resources :solicitudes_servicios
+  resources :solicitudes_servicios do
+     resources :servicios
+  end
 
 
   resources :calificaciones_servicios

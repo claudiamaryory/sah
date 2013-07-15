@@ -1,4 +1,5 @@
-<%= simple_form_for(@servicio, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+<%= simple_form_for([@solicitud_servicio,@servicio], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
 
   <%= f.error_notification %>
   
@@ -15,7 +16,7 @@
 <%= f.collection_select :cliente_id ,  Cliente.all, :id, :nombre%>
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-primary' %>
-    <%= link_to 'Atras', servicios_path, :class => 'btn btn-small' %>
+    <%= link_to 'Atras', solicitud_servicio_servicios_path(@solicitud_servicio), :class => 'btn btn-small' %>
   </div>
 <% end %>
 

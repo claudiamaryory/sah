@@ -1,6 +1,6 @@
 class SolicitudesServiciosController < ApplicationController
 
-  before_filter :find_cliente_and_solicitud_servicio
+  before_filter :find_cliente_and_solicitud_servicio # filtro para detalle amestro
   
   def index
     #@solicitudes_servicios = SolicitudServicio.all
@@ -49,7 +49,7 @@ class SolicitudesServiciosController < ApplicationController
 
   end
   
-  def find_cliente_and_solicitud_servicio
+  def find_cliente_and_solicitud_servicio # filtro de detalle maestro
     @cliente = Cliente.find(params[:cliente_id])
     @solicitud_servicio = SolicitudServicio.find(params[:id]) if params[:id]
   

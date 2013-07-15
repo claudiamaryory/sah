@@ -1,5 +1,5 @@
 $.lazybox("<%= escape_javascript(render :partial => 'form') %>");
 
 $('#cliente_barrio_nombre').bind('railsAutocomplete.select', function(event, data){
-$("#barrio_id").attr("value",data.item.id);
+$("#barrio_id").attr("value",data.item.id);//cosigo de autocomplete
 });
