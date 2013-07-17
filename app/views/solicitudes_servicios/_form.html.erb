@@ -11,10 +11,13 @@
   <%= f.collection_select :barrio_id, Barrio.all, :id, :nombre, :order => 'nombre' %>
    </div>
 <br>
+
   <%= f.input :telefono, :label => "Telefono",  :required => true %>
   <%= f.label :interesado %>
   <%= f.collection_select :ofertado_id, Ofertado.all, :id,:nombre, :order => 'nombre', :required => true %><br><br>
+
   <%= f.input :observaciones, :label => "Observaciones",  :required => true %>
+  
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-primary' %>
     <%= link_to 'Atras', cliente_solicitudes_servicios_path(@cliente), :class => 'btn btn-small' %>

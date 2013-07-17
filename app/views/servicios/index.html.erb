@@ -9,9 +9,10 @@
       <th>fecha</th>
       <th>hora</th>
       <th>empleado</th>
-      <th>solicitud_servicio</th>
+      <th>solicitud de servicio</th>
       <th>cliente</th>
-      <th></th>
+      <th>Estado</th>
+     
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,9 @@
 </table>
 
     <tr>
+       <td>
+         <%= link_to 'Atras', cliente_solicitudes_servicios_path(@solicitud_servicio.cliente), :class=>"btn", :id => 'am' %>
+      </td>
       <td><%= link_to 'Nuevo Servicio', new_solicitud_servicio_servicio_path(@solicitud_servicio), :remote => true, :class=>"btn", :id => 'am' %></td>
     </tr>
 

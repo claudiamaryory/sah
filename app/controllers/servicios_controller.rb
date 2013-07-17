@@ -33,6 +33,7 @@ before_filter :find_solicitudservicio_and_servicio # filtro para detalle amestro
     @servicio = Servicio.new(params[:servicio])
     @servicio.solicitud_servicio_id = @solicitud_servicio.id
     render :action => :new unless @servicio.save
+    
   
   end
 

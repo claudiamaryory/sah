@@ -6,7 +6,7 @@
   <%= f.input :fecha, :label => "Fecha",  :required => true %>
 
    <%= f.label :solicitud_servicio %>
-   <%= f.collection_select :solicitud_servicio_id, SolicitudServicio.all, :id,:nombre, :order => 'nombre', :required => true %><br><b>
+   <%= f.collection_select :solicitud_servicio_id, SolicitudServicio.all, :id,:direccion, :order => 'direccion', :required => true %><br><b>
 
 <%= f.label :observacion %><br><!--cambiar la el tamaño del cuadro de observacion-->
   <%= f.text_area(:observacion, :rows => 5 )%>

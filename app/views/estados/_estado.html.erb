@@ -1,0 +1,13 @@
+<tr id=<%= "estado#{estado.id}" %>>
+ 
+  <td><%=estado.nombre%></td>
+	
+	  <td>
+    <%= link_to 'Mostrar', estado, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_estado_path(estado), :remote => true,
+        :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', estado, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>

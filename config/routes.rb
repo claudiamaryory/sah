@@ -7,7 +7,7 @@ Sah::Application.routes.draw do
   resources :reprogramaciones
 
 
-  resources :evaluaciones
+  resources :estados
 
 
   resources :solicitudes_servicios do

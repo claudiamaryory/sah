@@ -6,6 +6,8 @@
   <td><%= servicio.empleado.nombre%></td>
   <td><%= servicio.solicitud_servicio.ofertado.nombre %></td>
   <td><%= servicio.cliente.nombre%></td>
+  <td><%= servicio.estado.nombre %></td>
+  
   <td>
     <%= link_to 'Mostrar', solicitud_servicio_servicios_path(@solicitud_servicio,servicio), :remote => true, :class => 'btn btn-mini' %>
 
@@ -16,7 +18,10 @@
     <%= link_to 'Eliminar', solicitud_servicio_servicio_path(@solicitud_servicio,servicio),
         :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
- 
+ <%= if servicio.estado.nombre == "reprogramado" then #link que me lleve el formulario de reprogramacion
+       link_to 'Reprogramar', new_reprogramacion_path, :remote => true,
+      :class => 'btn btn-mini' 
+    end %>
 
   </td>
 </tr>

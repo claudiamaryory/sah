@@ -23,13 +23,6 @@ class Cliente < ActiveRecord::Base
     validates :telefono, :presence => true,
     :length => { :minimum => 6, :maximum => 15 },
     :numericality => true
-
-     validates :celular, :presence => true,
-    :length => { :minimum => 6, :maximum => 15 },
-    :numericality => true
-    
-    
- 
    
    def self.search(search)
     where('nombre like ?', "%#{search}%")

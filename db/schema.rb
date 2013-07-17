@@ -62,18 +62,11 @@ ActiveRecord::Schema.define(:version => 20130709164926) do
     t.datetime "imagen_updated_at"
   end
 
-  create_table "evaluaciones", :force => true do |t|
-    t.integer  "empleado_id"
-    t.integer  "servicio_id"
-    t.integer  "tipo_calificacion_id"
-    t.text     "observacion"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+  create_table "estados", :force => true do |t|
+    t.string   "nombre"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
-
-  add_index "evaluaciones", ["empleado_id"], :name => "index_evaluaciones_on_empleado_id"
-  add_index "evaluaciones", ["servicio_id"], :name => "index_evaluaciones_on_servicio_id"
-  add_index "evaluaciones", ["tipo_calificacion_id"], :name => "index_evaluaciones_on_tipo_calificacion_id"
 
   create_table "municipios", :force => true do |t|
     t.string   "nombre"
@@ -113,27 +106,19 @@ ActiveRecord::Schema.define(:version => 20130709164926) do
   add_index "servicios", ["solicitud_servicio_id"], :name => "index_servicios_on_solicitud_servicio_id"
 
   create_table "solicitudes_servicios", :force => true do |t|
-    t.string   "nombre"
-    t.string   "apellido"
-    t.string   "documento"
+    t.integer  "cliente_id"
     t.string   "direccion"
     t.integer  "barrio_id"
     t.string   "telefono"
-    t.string   "celular"
-    t.string   "email"
+    t.string   "observaciones"
     t.integer  "ofertado_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   add_index "solicitudes_servicios", ["barrio_id"], :name => "index_solicitudes_servicios_on_barrio_id"
+  add_index "solicitudes_servicios", ["cliente_id"], :name => "index_solicitudes_servicios_on_cliente_id"
   add_index "solicitudes_servicios", ["ofertado_id"], :name => "index_solicitudes_servicios_on_ofertado_id"
-
-  create_table "tipo_calificacions", :force => true do |t|
-    t.string   "nombre"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "tipos_calificaciones", :force => true do |t|
     t.string   "nombre"

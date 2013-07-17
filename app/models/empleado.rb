@@ -1,5 +1,5 @@
 class Empleado < ActiveRecord::Base
-  has_many :evaluacion
+  has_many :estado
   attr_accessible :apellido, :celular, :documento, :nombre, :telefono, :imagen
 
     validates :nombre, :presence => true,
