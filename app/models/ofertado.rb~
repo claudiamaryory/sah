@@ -1,7 +1,0 @@
-class Ofertado < ActiveRecord::Base
-  attr_accessible :nombre
-  has_many :solicitud_servicio
-  def self.search(search)#codigo del buscador
-      where('nombre like ?', "%#{search}%")
-    end
-end

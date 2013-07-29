@@ -1,7 +1,7 @@
 <br><br><br><br>
 <%- model_class = Servicio -%>
 <div class="page-header">
-  <center><h1>Orden de Servicio</h1></center>
+  <center><h1>Orden de Servicios<br><%= @solicitud_servicio.cliente.nombre %> <%= @solicitud_servicio.cliente.apellido %></h1></center>
 </div>
 <table class="table table-striped table-bordered table-condensed">
   <thead>
@@ -26,5 +26,7 @@
          <%= link_to 'Atras', cliente_solicitudes_servicios_path(@solicitud_servicio.cliente), :class=>"btn", :id => 'am' %>
       </td>
       <td><%= link_to 'Nuevo Servicio', new_solicitud_servicio_servicio_path(@solicitud_servicio), :remote => true, :class=>"btn", :id => 'am' %></td>
+
+      <%= link_to "PDF", solicitud_servicio_servicios_path(@solicitud_servicio,:format => :pdf),:class=>"btn", :id => 'am'   %>
     </tr>
 

@@ -1,6 +1,6 @@
 <tr id=<%= "calificacion_servicio_#{calificacion_servicio.id}" %>>
  
-  <td><%= calificacion_servicio.cliente.nombre %></td>
+  <td><%= calificacion_servicio.cliente.nombre %> <%= calificacion_servicio.cliente.apellido %></td>
   <td><%= calificacion_servicio.tipo_calificacion.nombre %></td>
   <td><%= calificacion_servicio.observaciones %></td>
   <td>

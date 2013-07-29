@@ -18,7 +18,6 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
   gem 'json'
   gem 'less-rails'
-  gem 'twitter-bootstrap-rails'
   gem 'uglifier', '>= 1.0.3'
   
   gem 'bootstrap-will_paginate'
@@ -26,13 +25,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'lazybox'
 gem 'rails3-jquery-autocomplete'
 gem 'will_paginate'
 gem 'paperclip'
 gem 'remotipart'
-#gem 'prawn'
+gem 'prawn'
+gem 'bootstrap-datepicker-rails'
 #gem 'sorcery'
 #gem "bcrypt-ruby" , :require => "bcrypt" 
 #gem 'cancan'

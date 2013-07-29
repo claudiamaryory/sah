@@ -1,10 +1,12 @@
+<%= javascript_include_tag "fecha.js"%>
 <%= simple_form_for(@reprogramacion, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
   <%= f.error_notification %>
   
   <%= f.input :hora , :label => "Hora",  :required => true%>
-  <%= f.input :fecha, :label => "Fecha",  :required => true %>
-
+  
+  <%= f.input :fecha, :as => :string, :label => "Fecha",  :required => true, :input_html => {:class => "datepicker"} %><!--cambia  el formato de la fecha-->
+ 
    <%= f.label :solicitud_servicio %>
    <%= f.collection_select :solicitud_servicio_id, SolicitudServicio.all, :id,:direccion, :order => 'direccion', :required => true %><br><b>
 

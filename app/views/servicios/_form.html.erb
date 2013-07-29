@@ -1,9 +1,12 @@
+<%= javascript_include_tag "fecha.js"%>
 <%= simple_form_for([@solicitud_servicio,@servicio], :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
 
 
   <%= f.error_notification %>
   
-  <%= f.input :fecha , :label => "Fecha",  :required => true%>
+  <%= f.input :fecha, :as => :string, :label => "Fecha",  :required => true, :input_html => {:class => "datepicker"} %>
+
+
   <%= f.input :hora, :label => "Hora",  :required => true %>
   
 
