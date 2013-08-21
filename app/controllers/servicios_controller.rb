@@ -2,7 +2,7 @@ class ServiciosController < ApplicationController
 
   #require 'servicio_list.rb'
  
-  before_filter :find_solicitudservicio_and_servicio # filtro para detalle amestro
+  before_filter :find_solicitudservicio_and_servicio, :except => :ordenserv # filtro para detalle amestro
   class ServicioList < Prawn::Document
 
   #Hay dos formas de hacerlo 1- con el constructor de la clase o  2- con este Método principal que construye el  documento pdf y se invoca con el contructor en el controller
@@ -73,9 +73,9 @@ class ServiciosController < ApplicationController
 end
 
   def index
-    #@servicios = @solicitud_servicio.servicios.all 
-    @servicios = Servicio.all 
-    output = ServicioList.new(@servicios, view_context) # Aquí instancio el documento pdf
+    @servicios = @solicitud_servicio.servicios.all 
+    #@servicios = Servicio.all 
+    output = ServicioList.new(Servicio.all, view_context) # Aquí instancio el documento pdf
     respond_to do |format|
       format.pdf{
         send_data output.render, :filename => "serviciosList.pdf", :type => "application/pdf", 
@@ -84,6 +84,14 @@ end
       format.html #{ render :text => "<h1>Use .pdf</h1>".html_safe }
       format.json { render json: @servicios  }
     end
+  end
+
+  def ordenserv
+     @servicios = Servicio.order(:fecha)
+     respond_to do |format|
+        format.html #{ render :text => "<h1>Use .pdf</h1>".html_safe }
+        format.json { render json: @servicios  }
+     end
   end
 
   def show
@@ -124,7 +132,7 @@ end
     @servicio.destroy
   end
 
-  private
+  
   def find_solicitudservicio_and_servicio  # filtro de detalle maestro
       @solicitud_servicio = SolicitudServicio.find(params[:solicitud_servicio_id])
       @servicio = Servicio.find(params[:id]) if params[:id]

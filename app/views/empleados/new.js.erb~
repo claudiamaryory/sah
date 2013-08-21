@@ -1,2 +1,2 @@
 $.lazybox("<%= escape_javascript(render :partial => 'form') %>");
- $('#lazybox').css({margin: '60px'});
+ $('#lazybox').css({margin: '30px'});

@@ -8,7 +8,6 @@ class SolicitudesServiciosController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @solicitudes_servicios }
-      format.js
     end
   end
 

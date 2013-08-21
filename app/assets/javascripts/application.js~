@@ -29,7 +29,14 @@ $(document).ready(function() {
   $.rails.allowAction = $.lazybox.confirm;
 
 //configurar el datepicker para elegir con mayor facilidad el año y el mes de la fecha
-
+$(".datepicker").datepicker({
+  "format": "yyyy-mm-dd",
+  "weekStart": 1,
+  "language": 'es',
+  "autoclose": true,
+  changeMonth: true,
+  changeYear: true
+});
 
 // aquí debemos configurar todos los campos de autocompletado que requiramos en la aplicación
 $('#cliente_barrio_nombre').bind('railsAutocomplete.select', function(event, data){

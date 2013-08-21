@@ -7,7 +7,7 @@ class CreateServicios < ActiveRecord::Migration
       t.references :solicitud_servicio
       t.references :cliente
       t.references :estado
-      t.references :ofertados
+      t.references :ofertado
 
       t.timestamps
     end

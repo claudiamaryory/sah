@@ -1,6 +1,5 @@
 class Empleado < ActiveRecord::Base
-  has_many :estado
-  has_many :servicios
+  has_many :estado, :servicios
   attr_accessible :apellido, :celular, :documento, :nombre, :telefono, :imagen
 
     validates :nombre, :presence => true,

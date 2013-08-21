@@ -97,12 +97,16 @@ ActiveRecord::Schema.define(:version => 20130709164926) do
     t.integer  "empleado_id"
     t.integer  "solicitud_servicio_id"
     t.integer  "cliente_id"
+    t.integer  "estado_id"
+    t.integer  "ofertado_id"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
   end
 
   add_index "servicios", ["cliente_id"], :name => "index_servicios_on_cliente_id"
   add_index "servicios", ["empleado_id"], :name => "index_servicios_on_empleado_id"
+  add_index "servicios", ["estado_id"], :name => "index_servicios_on_estado_id"
+  add_index "servicios", ["ofertado_id"], :name => "index_servicios_on_ofertado_id"
   add_index "servicios", ["solicitud_servicio_id"], :name => "index_servicios_on_solicitud_servicio_id"
 
   create_table "solicitudes_servicios", :force => true do |t|
