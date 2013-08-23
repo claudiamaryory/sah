@@ -6,12 +6,14 @@ class CreateClientes < ActiveRecord::Migration
       t.string :documento
       t.string :direccion
       t.references :barrio
+      t.references :municipio
       t.string :telefono
       t.string :celular
       t.string :email
 
       t.timestamps
     end
-    add_index :clientes, :barrio_id
+    add_index :clientes, :barrio_id 
+    add_index :clientes, :municipio_id
   end
 end

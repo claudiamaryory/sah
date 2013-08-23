@@ -34,8 +34,8 @@ gem 'paperclip'
 gem 'remotipart'
 gem 'prawn'
 gem 'bootstrap-datepicker-rails'
-#gem 'sorcery'
-#gem "bcrypt-ruby" , :require => "bcrypt" 
+gem 'sorcery'
+gem "bcrypt-ruby" , :require => "bcrypt" 
 #gem 'cancan'
 #gem 'rolify'
 

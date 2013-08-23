@@ -2,5 +2,5 @@ $('table tbody').append("<%= escape_javascript(render @calificacion_servicio) %>
 $("input#totalregs").attr('value','<%= @calificaciones_servicios.count %>');//codigo del conteo de la paginacion
 $.lazybox.close()
 
-
+$('#lazybox').css({margin: '30px'}); //codigo para bajar la ventana de lazybox
 

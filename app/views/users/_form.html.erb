@@ -1,0 +1,53 @@
+<%= simple_form_for @user, :html => { :class => 'form-horizontal  offset3', :id => 'ej' } do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class=""> 
+    <div class="field control-group">
+      <%= f.label :nombre_completo, :class => 'control-label ' %>
+      <div class ="controls">
+       <%= f.text_field :id %>
+      </div> 
+    </div>
+
+    <div class="field control-group">
+      <%= f.label :username, :class => 'control-label ' %>
+      <div class ="controls">
+       <%= f.text_field :username %>
+      </div> 
+    </div>
+    <div class="field control-group">
+      <%= f.label :email %>
+      <div class ="controls">
+       <%= f.text_field :email %>
+      </div> 
+    </div>
+    <div class="field control-group">
+      <%= f.label :password %>
+      <div class ="controls">
+       <%= f.password_field :password %>
+      </div> 
+    </div>
+    <div class="field control-group">
+      <%= f.label :password_confirmacion %>
+      <div class ="controls">
+       <%= f.password_field :password_confirmation %>
+      </div>
+    </div>
+    <div class="control-group">
+     <div class ="controls">
+      <%= f.submit 'crear usuario', :class => 'btn btn-info'%>
+     </div>
+    </div>
+  </div>   
+<% end %>
+ 
+
+

@@ -23,6 +23,8 @@ def index#codigo de buscador
 
   def new
       @cliente = Cliente.new
+      @barrios = Barrio.all
+
   end
 
   def edit
@@ -31,8 +33,10 @@ def index#codigo de buscador
 
   def create
       @cliente = Cliente.new(params[:cliente])
+      @cliente.municipio_id = @cliente.barrio.municipio_id
      render :action => :new unless @cliente.save
      @clientes = Cliente.all
+     
   end
 
   def update
@@ -45,4 +49,9 @@ def index#codigo de buscador
       @clientes = Cliente.all
   end
   
+  def update_barrios
+    #@barrios = Barrio.where('municipio_id = ?', params[:municipio_id])
+    render :partial => "barrios", :object => @barrios
+  end
+
 end

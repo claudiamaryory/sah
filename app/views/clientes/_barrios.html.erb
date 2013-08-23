@@ -1,0 +1,1 @@
+<%= collection_select(:cliente, :barrio_id, @barrios = Barrio.where('municipio_id = ?', params[:municipio_id]), :id, :nombre, :prompt => 'Seleccione Barrio') %>

@@ -1,6 +1,3 @@
 $.lazybox("<%= escape_javascript(render :partial => 'form') %>");
  $('#lazybox').css({margin: '30px'}); //codigo para bajar la ventana de lazybox
  
-$('#cliente_barrio_nombre').bind('railsAutocomplete.select', function(event, data){
-$("#barrio_id").attr("value",data.item.id);//codigo de autocomplete
-});

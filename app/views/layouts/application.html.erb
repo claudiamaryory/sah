@@ -23,7 +23,10 @@
         <div class="content">
           <div class="row">
             <div class="span12">
-                
+              <% if current_user %>
+                  Usuario:
+                   <br><br><%= current_user.email %><br><br>
+              <% end %>
               <%= yield %>
             </div>
           </div>
