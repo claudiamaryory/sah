@@ -24,6 +24,7 @@ group :assets do
 
 end
 
+gem 'seed_dump'
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
