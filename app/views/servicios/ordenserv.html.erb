@@ -12,7 +12,7 @@
       <th>solicitud de servicio</th>
       <th>cliente</th>
       <th>Estado</th>
-     
+
     </tr>
   </thead>
   <tbody>
@@ -25,11 +25,9 @@
             <td><%= servicio.cliente.nombre %> <%= servicio.cliente.apellido%></td>
             <td><%= servicio.estado.nombre %></td>
           </tr>
-
       <% end %>
   </tbody>
-  
 </table>
 
-   
-
+   <td><%= link_to "PDF", ordenes_path(:format => :pdf),:class=>"btn", :id => 'am' %></td>
+  

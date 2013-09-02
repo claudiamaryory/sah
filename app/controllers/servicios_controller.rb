@@ -87,8 +87,13 @@ end
   end
 
   def ordenserv
-     @servicios = Servicio.order(:fecha)
+     @servicios = Servicio.order(:empleado_id, :fecha)
+     output = ServicioList.new(Servicio.all, view_context) # Aquí instancio el documento pdf
      respond_to do |format|
+        format.pdf{
+        send_data output.render, :filename => "serviciosList.pdf", :type => "application/pdf", 
+      :disposition => "inline" # este parámetro permite ver el documento pdf en linea.
+      }
         format.html #{ render :text => "<h1>Use .pdf</h1>".html_safe }
         format.json { render json: @servicios  }
      end

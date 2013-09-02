@@ -88,7 +88,7 @@ TipoCalificacion.create([
 
 User.create([
   { :username => "claudia ", :email => "claudiamaryory@hotmail.com", :crypted_password => "$2a$10$Rvvlfg2AFTz4loFaAnNdYOdwLNNqxIEA7E2B6fGtb6BhKwaZb64IG", :salt => "dLytQbrigc3rpzQtj3UP", :created_at => "2013-08-22 14:45:58", :updated_at => "2013-08-22 14:45:58", :remember_me_token => nil, :remember_me_token_expires_at => nil, :reset_password_token => nil, :reset_password_token_expires_at => nil, :reset_password_email_sent_at => nil },
-  { :username => "paulo", :email => "pcarmona@misena.edu.co", :crypted_password => "$2a$10$eFbYkHZ85eDMvAhnZo5n5eJCVhVhyX3dYPkJOfBQCSOm4/e2dowwS", :salt => "KZsaBsYykAmyiday9PPW", :created_at => "2013-08-23 16:26:10", :updated_at => "2013-08-23 16:26:10", :remember_me_token => nil, :remember_me_token_expires_at => nil, :reset_password_token => nil, :reset_password_token_expires_at => nil, :reset_password_email_sent_at => nil }
+  { :username => "claudia", :email => "claudiamaryory@misena.edu.co", :crypted_password => "$2a$10$eFbYkHZ85eDMvAhnZo5n5eJCVhVhyX3dYPkJOfBQCSOm4/e2dowwS", :salt => "KZsaBsYykAmyiday9PPW", :created_at => "2013-08-23 16:26:10", :updated_at => "2013-08-23 16:26:10", :remember_me_token => nil, :remember_me_token_expires_at => nil, :reset_password_token => nil, :reset_password_token_expires_at => nil, :reset_password_email_sent_at => nil }
 ], :without_protection => true )
 
 
