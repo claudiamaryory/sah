@@ -104,9 +104,7 @@ end
      #@servicio = params[:servicio] 
      @estado = Estado.find_by_nombre("terminado")
      @servicio.estado_id = @estado.id
-     if @servicio.save
-     # envio de correo
-     end
+     @servicio.save
      @servicios = @solicitud_servicio.servicios.all
      respond_to do |format|
       format.html { redirect_to solicitud_servicio_servicios_path(@solicitud_servicio), :notice => "Servicio Terminado con Éxito"}

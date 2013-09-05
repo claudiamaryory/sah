@@ -1,16 +1,16 @@
 <tr id=<%= "servicio_#{servicio.id}" %>>
-  
-  
+ 
+  <td><%= servicio.estado.nombre %></td>
   <td><%= servicio.fecha %></td>
   <td><%= servicio.hora %></td>
   <td><%= servicio.empleado.nombre%> <%= servicio.empleado.apellido%></td>
-  <td><%= servicio.solicitud_servicio.ofertado_id%></td>
+  <td><%= servicio.solicitud_servicio.ofertado.nombre%></td>
   <td><%= servicio.cliente.nombre%> <%= servicio.cliente.apellido%></td>
-  <td><%= servicio.estado.nombre %></td>
+  
   <td>
   	<%= link_to "Ver",solicitud_servicio_servicio_path(@solicitud_servicio,servicio), :remote => true, :class => "btn btn-info" %>
     <%= link_to "Editar",edit_solicitud_servicio_servicio_path(@solicitud_servicio,servicio), :remote => true, :class => "btn btn-danger" %>
-    <%= link_to 'Eliminar', solicitud_servicio_servicio_path(@solicitud_servicio,servicio),
+    <%= link_to 'Eliminar', solicitud_servicio_servicio_path( @solicitud_servicio,servicio),
         :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-dang'  %>
 
@@ -19,6 +19,9 @@
       :class => 'btn btn-dang' 
     end %>
 
+ <% if servicio.estado.nombre != "terminado" then # link que me cambia el estado de la solicitud cuando ya se a terminado el servicio prestado %> 
+  <%= link_to "Terminar Servicio", estado_orden_path(:solicitud_servicio_id => @solicitud_servicio, :id => servicio), :class => "btn btn-info" %>  
+  <% end %>
 	</td>
   
 </tr>

@@ -12,7 +12,7 @@
       <th>solicitud de servicio</th>
       <th>cliente</th>
       <th>Estado</th>
-      <th><%= link_to "PDF", ordenes_path(:format => :pdf),:class=>"btn", :id => 'am'   %></th>
+      <th><%= link_to "PDF", ordenes_path(@solicitud_servicio,:format => :pdf),:class=>"btn", :id => 'am'   %></th>
      
     </tr>
   </thead>
