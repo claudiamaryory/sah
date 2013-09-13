@@ -1,7 +1,8 @@
 class ServiciosController < ApplicationController
 
   #require 'servicio_list.rb'
- 
+ # ServicioMailer.registration_contacto(@servicio).deliver 
+
   before_filter :find_solicitudservicio_and_servicio, :except => :ordenserv # filtro para detalle amestro
   class ServicioList < Prawn::Document
 
@@ -99,13 +100,11 @@ end
      end
   end
   
-  def estado
-     #@solicitud_servicio = params[:solicitud]
-     #@servicio = params[:servicio] 
+  def estado # metodo para el boton que me cambia el estado del servicio al ser termanado el servicio prestado
      @estado = Estado.find_by_nombre("terminado")
      @servicio.estado_id = @estado.id
      if @servicio.save
-     # envio de correo
+       ServicioMailer.registration_contacto(@servicio).deliver # para enviar correo
      end
      @servicios = @solicitud_servicio.servicios.all
      respond_to do |format|

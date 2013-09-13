@@ -20,7 +20,8 @@
     end %>
 
  <% if servicio.estado.nombre != "terminado" then # link que me cambia el estado de la solicitud cuando ya se a terminado el servicio prestado %> 
-  <%= link_to "Terminar Servicio", estado_orden_path(:solicitud_servicio_id => @solicitud_servicio, :id => servicio), :class => "btn btn-info" %>  
+ 
+    <%= link_to "Terminar Servicio", estado_orden_path(:solicitud_servicio_id => @solicitud_servicio, :id => servicio), :class => "btn btn-info" %>  
   <% end %>
 	</td>
   

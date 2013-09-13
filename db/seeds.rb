@@ -3,32 +3,9 @@
 # Do not hesitate to tweak this to your needs
 
 Barrio.create([
-  { :nombre => "margaritas", :municipio_id => 3, :created_at => "2013-07-31 16:12:12", :updated_at => "2013-07-31 16:12:12" },
-  { :nombre => "magnolia", :municipio_id => 4, :created_at => "2013-07-31 16:12:35", :updated_at => "2013-07-31 16:12:35" }
+  { :nombre => "margaritas", :municipio_id => 1, :created_at => "2013-07-31 16:12:12", :updated_at => "2013-07-31 16:12:12" },
+  { :nombre => "magnolia", :municipio_id => 2, :created_at => "2013-07-31 16:12:35", :updated_at => "2013-07-31 16:12:35" }
 ], :without_protection => true )
-
-
-
-CalificacionServicio.create([
-  { :cliente_id => 5, :tipo_calificacion_id => 1, :observaciones => "", :created_at => "2013-07-23 16:44:15", :updated_at => "2013-07-23 16:44:15" }
-], :without_protection => true )
-
-
-
-Cliente.create([
-  { :nombre => "claudia", :apellido => "giraldo", :documento => "43733954", :direccion => "diagonal 33 b 201", :barrio_id => 5, :municipio_id => 3, :telefono => "3345871", :celular => "312354887", :email => "carol@hotmail.com", :created_at => "2013-08-22 17:08:14", :updated_at => "2013-08-22 17:08:14" },
-  { :nombre => "carolina", :apellido => "giraldo", :documento => "43875753", :direccion => "diagonal 33 b 201", :barrio_id => 5, :municipio_id => 3, :telefono => "3345871", :celular => "3162773007", :email => "carol@misena.edu.co", :created_at => "2013-08-23 15:57:40", :updated_at => "2013-08-23 15:57:40" },
-  { :nombre => "cristiaa", :apellido => "jimenez", :documento => "9874561", :direccion => "diagonal 43 ·8293", :barrio_id => 5, :municipio_id => 3, :telefono => "2458789", :celular => "312548795241", :email => "jimenez@hotmail.com", :created_at => "2013-08-28 16:50:42", :updated_at => "2013-08-28 16:50:42" }
-], :without_protection => true )
-
-
-
-Empleado.create([
-  { :nombre => "andres", :apellido => "echeverri", :documento => "21254878", :telefono => "235698", :celular => "3178386636", :created_at => "2013-07-29 16:23:09", :updated_at => "2013-08-23 16:15:12", :imagen_file_name => "chrystiam.jpg", :imagen_content_type => "image/jpeg", :imagen_file_size => 5128, :imagen_updated_at => "2013-08-23 16:15:12" },
-  { :nombre => "carolina ", :apellido => "giraldo", :documento => "1037607498", :telefono => "3022824", :celular => "3178386636", :created_at => "2013-07-23 16:42:14", :updated_at => "2013-08-23 16:15:22", :imagen_file_name => "descarga.jpg", :imagen_content_type => "image/jpeg", :imagen_file_size => 3655, :imagen_updated_at => "2013-08-23 16:15:22" }
-], :without_protection => true )
-
-
 
 Estado.create([
   { :nombre => "en espera", :created_at => "2013-07-23 16:43:39", :updated_at => "2013-07-23 16:43:39" },
@@ -52,32 +29,6 @@ Ofertado.create([
 ], :without_protection => true )
 
 
-
-Reprogramacion.create([
-  { :hora => "2000-01-01 15:47:00", :fecha => "2013-07-30", :solicitud_servicio_id => 2, :observacion => "", :created_at => "2013-07-30 15:47:34", :updated_at => "2013-07-30 15:47:34" }
-], :without_protection => true )
-
-
-
-Servicio.create([
-  { :fecha => "2013-08-02", :hora => "2000-01-01 02:37:00", :empleado_id => 1, :solicitud_servicio_id => 4, :cliente_id => 5, :estado_id => 1, :ofertado_id => nil, :created_at => "2013-08-23 15:56:36", :updated_at => "2013-08-23 15:56:36" },
-  { :fecha => "2013-08-07", :hora => "2000-01-01 15:58:00", :empleado_id => 1, :solicitud_servicio_id => 4, :cliente_id => 5, :estado_id => 1, :ofertado_id => nil, :created_at => "2013-08-23 15:58:13", :updated_at => "2013-08-23 15:58:13" },
-  { :fecha => "2013-08-02", :hora => "2000-01-01 16:05:00", :empleado_id => 1, :solicitud_servicio_id => 5, :cliente_id => 5, :estado_id => 3, :ofertado_id => nil, :created_at => "2013-08-23 16:05:12", :updated_at => "2013-08-28 13:50:12" },
-  { :fecha => "2013-08-30", :hora => "2000-01-01 16:30:00", :empleado_id => 2, :solicitud_servicio_id => 6, :cliente_id => 7, :estado_id => 1, :ofertado_id => nil, :created_at => "2013-08-28 16:51:34", :updated_at => "2013-08-28 16:51:34" }
-], :without_protection => true )
-
-
-
-SolicitudServicio.create([
-  { :cliente_id => 2, :direccion => "diagonal 33 b201", :barrio_id => 5, :telefono => "3022824", :observaciones => "", :ofertado_id => 2, :created_at => "2013-08-16 14:03:04", :updated_at => "2013-08-16 14:03:04" },
-  { :cliente_id => 2, :direccion => "diagonal 33 b201", :barrio_id => 5, :telefono => "3022824", :observaciones => "", :ofertado_id => 2, :created_at => "2013-08-16 14:04:16", :updated_at => "2013-08-16 14:04:16" },
-  { :cliente_id => 5, :direccion => "diagonal 33 b201", :barrio_id => 6, :telefono => "3022824", :observaciones => "", :ofertado_id => 2, :created_at => "2013-08-23 15:46:33", :updated_at => "2013-08-23 15:46:33" },
-  { :cliente_id => 6, :direccion => "diagonal 33 a 201", :barrio_id => 5, :telefono => "3022824", :observaciones => "vdstfwer", :ofertado_id => 1, :created_at => "2013-08-23 16:04:55", :updated_at => "2013-08-23 16:04:55" },
-  { :cliente_id => 7, :direccion => "diagonal 43·2389", :barrio_id => 5, :telefono => "2154789", :observaciones => "instalar un closet", :ofertado_id => 3, :created_at => "2013-08-28 16:51:14", :updated_at => "2013-08-28 16:51:14" }
-], :without_protection => true )
-
-
-
 TipoCalificacion.create([
   { :nombre => "buena", :created_at => "2013-07-23 16:42:42", :updated_at => "2013-07-23 16:42:42" },
   { :nombre => "mala", :created_at => "2013-07-23 16:42:47", :updated_at => "2013-07-23 16:42:47" },
@@ -87,8 +38,8 @@ TipoCalificacion.create([
 
 
 User.create([
-  { :username => "claudia ", :email => "claudiamaryory@hotmail.com", :crypted_password => "$2a$10$Rvvlfg2AFTz4loFaAnNdYOdwLNNqxIEA7E2B6fGtb6BhKwaZb64IG", :salt => "dLytQbrigc3rpzQtj3UP", :created_at => "2013-08-22 14:45:58", :updated_at => "2013-08-22 14:45:58", :remember_me_token => nil, :remember_me_token_expires_at => nil, :reset_password_token => nil, :reset_password_token_expires_at => nil, :reset_password_email_sent_at => nil },
-  { :username => "paulo", :email => "pcarmona@misena.edu.co", :crypted_password => "$2a$10$eFbYkHZ85eDMvAhnZo5n5eJCVhVhyX3dYPkJOfBQCSOm4/e2dowwS", :salt => "KZsaBsYykAmyiday9PPW", :created_at => "2013-08-23 16:26:10", :updated_at => "2013-08-23 16:26:10", :remember_me_token => nil, :remember_me_token_expires_at => nil, :reset_password_token => nil, :reset_password_token_expires_at => nil, :reset_password_email_sent_at => nil }
-], :without_protection => true )
+  
+  { :username => "claudia", :email => "claudiamaryory@misena.edu.co", :password => "123", :salt => nil, :created_at => "2013-08-23 16:26:10", :updated_at => "2013-08-23 16:26:10", :remember_me_token => nil, :remember_me_token_expires_at => nil, :reset_password_token => nil, :reset_password_token_expires_at => nil, :reset_password_email_sent_at => nil }
+])
 
 
