@@ -38,8 +38,12 @@ TipoCalificacion.create([
 
 
 User.create([
+
   
   { :username => "claudia", :email => "claudiamaryory@misena.edu.co", :password => "123", :salt => nil, :created_at => "2013-08-23 16:26:10", :updated_at => "2013-08-23 16:26:10", :remember_me_token => nil, :remember_me_token_expires_at => nil, :reset_password_token => nil, :reset_password_token_expires_at => nil, :reset_password_email_sent_at => nil }
 ])
+
+  
+
 
 

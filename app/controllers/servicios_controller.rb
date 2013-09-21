@@ -89,6 +89,8 @@ end
 
   def ordenserv
      @servicios = Servicio.order(:fecha)
+
+     @servicios = Servicio.order(:empleado_id, :fecha)
      output = ServicioList.new(Servicio.all, view_context) # Aquí instancio el documento pdf
      respond_to do |format|
         format.pdf{

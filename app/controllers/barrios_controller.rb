@@ -1,6 +1,6 @@
 class BarriosController < ApplicationController
-
-   before_filter :find_municipio_and_barrio
+  load_and_authorize_resource :only => [:new, :edit, :destroy]
+  before_filter :find_municipio_and_barrio
 
  def index#codigo de buscador
     @nrp = (params[:registro] != nil)? params[:registro].to_i : 2 # seleccionar el numero de registros

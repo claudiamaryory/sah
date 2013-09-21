@@ -23,7 +23,7 @@ group :assets do
   gem 'bootstrap-will_paginate'
 
 end
-
+	
 gem 'seed_dump'
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
@@ -37,8 +37,8 @@ gem 'prawn'
 gem 'bootstrap-datepicker-rails'
 gem 'sorcery'
 gem "bcrypt-ruby" , :require => "bcrypt" 
-#gem 'cancan'
-#gem 'rolify'
+gem 'cancan'
+gem 'rolify'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
